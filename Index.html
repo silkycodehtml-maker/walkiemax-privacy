@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WalkieMax — Privacy Policy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;600;800&display=swap');
+
+  :root {
+    --bg: #0a0e0a;
+    --card: #111711;
+    --border: #1f2d1f;
+    --phosphor: #39ff6e;
+    --amber: #f5a623;
+    --text: #c8d8c8;
+    --muted: #5a7a5a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    min-height: 100vh;
+    padding: 0 0 80px;
+  }
+
+  /* Scanline overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.08) 2px,
+      rgba(0,0,0,0.08) 4px
+    );
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 32px 24px 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--phosphor), transparent);
+    opacity: 0.4;
+  }
+
+  .logo {
+    width: 48px; height: 48px;
+    background: linear-gradient(135deg, #1a2e1a, #0d1a0d);
+    border: 1.5px solid var(--phosphor);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 22px;
+    color: var(--phosphor);
+    box-shadow: 0 0 16px rgba(57,255,110,0.2);
+    flex-shrink: 0;
+  }
+
+  .header-text h1 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+    line-height: 1;
+  }
+
+  .header-text p {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    color: var(--phosphor);
+    margin-top: 4px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .updated {
+    margin-left: auto;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    text-align: right;
+    line-height: 1.6;
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px 0;
+  }
+
+  .intro {
+    background: linear-gradient(135deg, rgba(57,255,110,0.05), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--phosphor);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text);
+  }
+
+  section {
+    margin-bottom: 36px;
+  }
+
+  h2 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--phosphor);
+    font-family: 'Share Tech Mono', monospace;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  h2::before {
+    content: '//';
+    color: var(--muted);
+    font-size: 11px;
+  }
+
+  h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 12px;
+  }
+
+  ul li {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text);
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 4px;
+  }
+
+  ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--phosphor);
+    font-size: 11px;
+    top: 4px;
+  }
+
+  .tag {
+    display: inline-block;
+    background: rgba(57,255,110,0.08);
+    border: 1px solid rgba(57,255,110,0.2);
+    color: var(--phosphor);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin: 2px;
+  }
+
+  .tag.amber {
+    background: rgba(245,166,35,0.08);
+    border-color: rgba(245,166,35,0.2);
+    color: var(--amber);
+  }
+
+  .contact-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 13px;
+  }
+
+  .contact-box a {
+    color: var(--phosphor);
+    text-decoration: none;
+  }
+
+  .contact-box a:hover {
+    text-decoration: underline;
+  }
+
+  .contact-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+  }
+
+  .contact-row:last-child { border-bottom: none; }
+
+  .contact-label {
+    color: var(--muted);
+    min-width: 80px;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  footer {
+    margin-top: 60px;
+    padding: 24px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  footer span {
+    color: var(--phosphor);
+  }
+</style>
+<!-- CSS_ADSBLOCK_START -->
+<link rel="stylesheet" href="https://adblockers.opera-mini.net/css_block/default-domainless.css" type="text/css" />
+<!-- CSS_ADSBLOCK_END -->
+</head>
+<body>
+
+<header>
+  <div class="logo">W</div>
+  <div class="header-text">
+    <h1>WalkieMax</h1>
+    <p>Privacy Policy</p>
+  </div>
+  <div class="updated">
+    LAST UPDATED<br>March 30, 2026
+  </div>
+</header>
+
+<main>
+
+  <div class="intro">
+    WalkieMax ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use the WalkieMax walkie-talkie application ("App"). We do not sell your personal data.
+  </div>
+
+  <section>
+    <h2>Information We Collect</h2>
+    <p>WalkieMax is designed to work locally over WiFi/hotspot networks. We collect minimal data:</p>
+    <ul>
+      <li><strong>Device name</strong> — displayed to other users on the same channel</li>
+      <li><strong>Local IP address</strong> — used only for peer-to-peer connection within your local network</li>
+      <li><strong>Microphone audio</strong> — transmitted in real-time only during active transmission; never stored or sent to our servers</li>
+    </ul>
+    <p>We do <strong>not</strong> collect: account information, location data, contacts, call logs, or any data sent to external servers by us.</p>
+  </section>
+
+  <section>
+    <h2>Permissions Used</h2>
+    <ul>
+      <li><span class="tag">RECORD_AUDIO</span> — for push-to-talk transmission</li>
+      <li><span class="tag">INTERNET</span> — for local network UDP communication</li>
+      <li><span class="tag">ACCESS_WIFI_STATE</span> — to detect WiFi network and obtain local IP</li>
+      <li><span class="tag">CHANGE_WIFI_STATE</span> — to create local hotspot as server</li>
+      <li><span class="tag">NEARBY_WIFI_DEVICES</span> — required on Android 13+ for hotspot creation</li>
+      <li><span class="tag">CAMERA</span> — for QR code scanning to connect to a server</li>
+      <li><span class="tag">POST_NOTIFICATIONS</span> — for foreground service notification when app is active</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Advertising (Google AdMob)</h2>
+    <p>The free version of WalkieMax displays ads provided by <strong>Google AdMob</strong>. AdMob may collect and use data to show personalized ads, including:</p>
+    <ul>
+      <li>Advertising ID (Android Ad ID)</li>
+      <li>Device information (model, OS version)</li>
+      <li>Approximate location (based on IP)</li>
+      <li>App usage data</li>
+    </ul>
+    <p>This data is collected and processed by Google LLC under their own privacy policy. You can review it at: <span class="tag amber">policies.google.com/privacy</span></p>
+    <p>PRO users who subscribe or watch rewarded ads to unlock 24h PRO access will not see banner ads during that period.</p>
+  </section>
+
+  <section>
+    <h2>Data Sharing</h2>
+    <p>We do not sell, trade, or share your personal data with third parties, except:</p>
+    <ul>
+      <li>Google AdMob — for advertising purposes (free version only)</li>
+      <li>When required by law or legal process</li>
+    </ul>
+    <p>Audio transmitted via WalkieMax is sent only between devices on the same local network session and is never stored on any server.</p>
+  </section>
+
+  <section>
+    <h2>Children's Privacy</h2>
+    <p>WalkieMax is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately.</p>
+  </section>
+
+  <section>
+    <h2>Your Rights (GDPR)</h2>
+    <p>If you are located in the European Economic Area (EEA), you have rights regarding your personal data:</p>
+    <ul>
+      <li>Right to access your data</li>
+      <li>Right to erasure ("right to be forgotten")</li>
+      <li>Right to restrict processing</li>
+      <li>Right to object to processing</li>
+      <li>Right to opt out of personalized ads (via Android settings → Privacy → Ads)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Data Retention</h2>
+    <p>WalkieMax does not store audio or communication data on any server. Connection logs (IP addresses used within a session) exist only in device memory and are cleared when the app is closed.</p>
+    <p>App preferences (PRO status, settings) are stored locally on your device only and can be cleared by uninstalling the app.</p>
+  </section>
+
+  <section>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date. Continued use of the App after changes constitutes acceptance of the revised policy.</p>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <div class="contact-box">
+      <div class="contact-row">
+        <span class="contact-label">APP</span>
+        <span>WalkieMax — Walkie Talkie over WiFi</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">DEVELOPER</span>
+        <span>SilkyCode</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">COUNTRY</span>
+        <span>Estonia, EU</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">EMAIL</span>
+        <a href="mailto:silkycodehtml@gmail.com">silkycodehtml@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 <span>WalkieMax</span> · Estonia, EU · All rights reserved
+</footer>
+
+</body>
+</html>
